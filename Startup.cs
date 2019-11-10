@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace DutchTreat
 {
@@ -17,6 +18,13 @@ namespace DutchTreat
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // app.UseDefaultFiles();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            } else {
+              //add error page
+            }
+
             app.UseStaticFiles();
             app.UseNodeModules();
             app.UseRouting();
