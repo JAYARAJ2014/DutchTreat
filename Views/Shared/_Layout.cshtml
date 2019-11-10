@@ -4,12 +4,11 @@
   <head>
     <title>Dutch Treat: @ViewBag.Title</title>
     <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
   </head>
   <body>
-      <header>
-          <h1>
-Welcome to Dutch Treat
-          </h1>
+      <header class="container">
+          <h1>Welcome to Dutch Treat</h1>
           <menu>
           <ul>
               <li> <a asp:controller="App" asp-action="Index">Home</a></li>
@@ -18,10 +17,16 @@ Welcome to Dutch Treat
           </ul>
           </menu>
           </header>
+          <section class="container">
     <h2>@ViewBag.Title</h2>
     @RenderBody()
-    <footer>Copyright 2019 Dutch Treat LLC</footer>
+    </section>
+    <footer class="container">
+      <div class="text-center">Copyright 2019 Dutch Treat LLC
+        </div>
+    </footer>
   <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/scripts/index.js"></script>
     @RenderSection("Scripts", false)
   </body>
