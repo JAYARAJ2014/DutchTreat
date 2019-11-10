@@ -29,6 +29,7 @@ namespace DutchTreat.Controllers
             if (ModelState.IsValid)
             {
                 _emailService.SendEmail(model.Email, model.Subject, model.Message);
+                ViewBag.UserMessage = "Email has been send";
             }
             else
             {
