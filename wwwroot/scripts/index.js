@@ -18,3 +18,10 @@ productInfo.on("click", function(){
     console.log("You clicked on " + $(this).text());
 });
 });
+
+var logginToggle = $("#loginToggle");
+var popupForm = $(".popup-form");
+
+logginToggle.on("click", function () {
+    popupForm.slideToggle(400);
+});

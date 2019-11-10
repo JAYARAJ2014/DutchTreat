@@ -2,11 +2,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input[type=submit] {
+input[type='submit'] {
   width: auto;
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 18px;
   width: 200px;
 }
@@ -19,18 +20,18 @@ label {
   background-color: #d0d0d0;
 }
 
-  #theForm input[type=submit] {
-    background-color: green;
-    color: white;
-  }
+#theForm input[type='submit'] {
+  background-color: green;
+  color: white;
+}
 
 ul.product-props {
   font-size: small;
 }
 
-  ul.product-props li {
-    list-style-type: none;
-  }
+ul.product-props li {
+  list-style-type: none;
+}
 
 .product-info {
   border: 1px solid grey;
@@ -42,11 +43,31 @@ ul.product-props {
   border-radius: 5px;
 }
 
-  .product-info img {
-    margin: 3px;
-    float: left;
-    border: 1px solid black;
-    max-width: 150px;
-  }
+.product-info img {
+  margin: 3px;
+  float: left;
+  border: 1px solid black;
+  max-width: 150px;
+}
 
+#loginToggle {
+  cursor: pointer;
+}
 
+.popup-form {
+  padding: 5px;
+  border: 2px black inset;
+  display:inline-block;
+}
+
+.popup-form input{
+  width:200px;
+}
+
+.popup-form label {
+  width: 150px; 
+  display: inline-block;
+}
+.popup-form input[type=checkbox] , .popup-form input[type=submit] {
+  width:auto;
+}
