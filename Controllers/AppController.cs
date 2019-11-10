@@ -1,10 +1,17 @@
 using System;
+using DutchTreat.Services;
 using DutchTreat.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 namespace DutchTreat.Controllers
 {
     public class AppController : Controller
     {
+        private readonly IEmailService _emailService;
+
+        public AppController(IEmailService emailService)
+        {
+            _emailService = emailService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -21,7 +28,7 @@ namespace DutchTreat.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                _emailService.SendEmail(model.Email, model.Subject, model.Message);
             }
             else
             {
