@@ -5,8 +5,8 @@ var y = "";
 
 console.log("Hello World");
 
-var theForm = $("#theForm");
-theForm.hide(); 
+// var theForm = $("#theForm");
+// theForm.hide(); 
 
 var buyButton =$("#buyButton");
 buyButton.on("click", function ()  {

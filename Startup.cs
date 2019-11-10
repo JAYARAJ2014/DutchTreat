@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 namespace DutchTreat
 {
     public class Startup
@@ -21,8 +20,10 @@ namespace DutchTreat
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            } else {
-              //add error page
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
             }
 
             app.UseStaticFiles();
