@@ -1,0 +1,11 @@
+@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "Shop";
+}
+
+<p>@Model.Count()</p>
+@foreach (var product in Model) {
+
+    <li> product.Title </li>
+}
