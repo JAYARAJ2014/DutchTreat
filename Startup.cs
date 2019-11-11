@@ -1,4 +1,5 @@
 using DutchTreat.Data;
+using DutchTreat.Data.Repository;
 using DutchTreat.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,7 @@ namespace DutchTreat
         {
             services.AddDbContext<DutchContext>(c => c.UseSqlServer(_config.GetConnectionString("Default")));
             services.AddTransient<DutchSeeder>();
+            services.AddScoped<IDutchRepository, DutchRepository>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddControllersWithViews();
         }
