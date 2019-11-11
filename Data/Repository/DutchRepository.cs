@@ -1,16 +1,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using DutchTreat.Data.Entities;
+using Microsoft.Extensions.Logging;
 
 namespace DutchTreat.Data.Repository
 {
     public class DutchRepository : IDutchRepository
     {
         private readonly DutchContext _context;
+        private readonly ILogger<DutchContext> _logger;
 
-        public DutchRepository(DutchContext context)
+        public DutchRepository(DutchContext context, ILogger<DutchContext> logger)
         {
             _context = context;
+            _logger = logger;
         }
         public IEnumerable<Product> GetAllProducts()
         {

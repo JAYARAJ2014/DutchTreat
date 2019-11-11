@@ -5,7 +5,20 @@
 }
 
 <p>@Model.Count()</p>
+<div class="row">
 @foreach (var product in Model) {
-
-    <li> @product.Title </li>
+<div class="col-md-3">
+    <div class="border bg-light rounded p-1">
+         <img src="~/images/@(product.ArtId).jpg" class="img-fluid" />
+            <h3>@product.Category - @product.Size</h3>
+            <ul class="product-props">
+              <li>Price: $@product.Price</li>
+              <li>Artist: @product.Artist</li>
+              <li>Title:@product.Title/li>
+              <li>Description: @product.ArtDescription</li>
+            </ul>
+            <button class="btn btn-success" id="buyButton">Buy</button>
+            </div>
+            </div>
 }
+</div>

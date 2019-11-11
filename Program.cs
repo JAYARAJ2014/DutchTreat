@@ -12,7 +12,7 @@ namespace DutchTreat
         {
             var host = BuildWebHost(args);
 
-            SeedDatabase(host);
+            // SeedDatabase(host);
 
 
             host.Run();
